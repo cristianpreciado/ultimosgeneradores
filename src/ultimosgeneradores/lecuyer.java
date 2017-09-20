@@ -47,7 +47,12 @@ public class lecuyer extends javax.swing.JInternalFrame {
 
         valx.setText("12345");
 
-        valy.setText("34567");
+        valy.setText("67");
+        valy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                valyActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("valor parada");
 
@@ -120,23 +125,29 @@ public class lecuyer extends javax.swing.JInternalFrame {
         int n=0;
         double [] x =new double[parada];
         double [] y =new double[parada];
-        double [] z =new double[parada-1];
-        double [] u =new double[parada-1];
+        double [] z =new double[parada];
+        double [] u =new double[parada];
         x[0]=Long.parseLong(valx.getText());
         y[0]=Long.parseLong(valy.getText());
         while(n<parada-1){
             x[n+1]=(40014*x[n])%2147483563;
             y[n+1]=(40692*y[n])%2147483399;
-            z[n]=(x[n] - y[n])%30323;
-            if(z[n]>0){
-                u[n]=z[n]/2147483563;
+            z[n+1]=(x[n] - y[n])%2147483562;
+            System.out.println(z[n+1]);
+            if(z[n+1]>0){
+                u[n+1]=z[n+1]/2147483563;
+                
             }else{
-                u[n]=2147483562/2147483563;
+                u[n+1]=0.9999999995343387;
             }
             n++;
         }
         resultado.setText(" X: "+Arrays.toString(x)+"\n U: "+Arrays.toString(u));
     }//GEN-LAST:event_generarActionPerformed
+
+    private void valyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_valyActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

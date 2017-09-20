@@ -51,6 +51,7 @@ public class FrameFibbonacci extends javax.swing.JInternalFrame {
 
         labeln0.setText("Ingrese n0");
 
+        n0.setText("4");
         n0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n0ActionPerformed(evt);
@@ -59,6 +60,7 @@ public class FrameFibbonacci extends javax.swing.JInternalFrame {
 
         labeln1.setText("Ingrese n1");
 
+        n1.setText("11");
         n1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n1ActionPerformed(evt);
@@ -67,12 +69,14 @@ public class FrameFibbonacci extends javax.swing.JInternalFrame {
 
         labelmodulo.setText("Ingrese m");
 
+        modulo.setText("13");
         modulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 moduloActionPerformed(evt);
             }
         });
 
+        vals.setText("1");
         vals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valsActionPerformed(evt);
@@ -83,12 +87,14 @@ public class FrameFibbonacci extends javax.swing.JInternalFrame {
 
         labelr.setText("Ingrese r");
 
+        valr.setText("2");
         valr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valrActionPerformed(evt);
             }
         });
 
+        operacion.setText("*");
         operacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 operacionActionPerformed(evt);
@@ -104,6 +110,7 @@ public class FrameFibbonacci extends javax.swing.JInternalFrame {
             }
         });
 
+        valparada.setText("8");
         valparada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valparadaActionPerformed(evt);
@@ -236,7 +243,7 @@ public class FrameFibbonacci extends javax.swing.JInternalFrame {
         int valmodulo = Integer.parseInt(modulo.getText());
         x[0]=Integer.parseInt(n0.getText());
         x[1]=Integer.parseInt(n1.getText());
-        while(n<=parada){
+        while(n<parada){
             if(ope.equals("+")){
                 x[n]=(x[n-s] + x[n-r])%valmodulo;
             }else if(ope.equals("-")){

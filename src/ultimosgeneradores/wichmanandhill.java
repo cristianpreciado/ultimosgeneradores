@@ -49,7 +49,15 @@ public class wichmanandhill extends javax.swing.JInternalFrame {
 
         jLabel3.setText("valor Z");
 
+        valx.setText("12345");
+
+        valy.setText("34567");
+
+        valz.setText("56789");
+
         jLabel4.setText("valor parada");
+
+        valparada.setText("8");
 
         generar.setText("Generar Numeros");
         generar.addActionListener(new java.awt.event.ActionListener() {
@@ -122,10 +130,10 @@ public class wichmanandhill extends javax.swing.JInternalFrame {
     private void generarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarActionPerformed
         int parada=Integer.parseInt(valparada.getText());
         int n=0;
-        int [] x =new int[parada];
-        int [] y =new int[parada];
-        int [] z =new int[parada];
-        int [] u =new int[parada-1];
+        double [] x =new double[parada];
+        double [] y =new double[parada];
+        double [] z =new double[parada];
+        double [] u =new double[parada-1];
         x[0]=Integer.parseInt(valx.getText());
         y[0]=Integer.parseInt(valy.getText());
         z[0]=Integer.parseInt(valz.getText());

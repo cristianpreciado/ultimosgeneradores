@@ -45,7 +45,13 @@ public class lecuyer extends javax.swing.JInternalFrame {
 
         jLabel2.setText("valor Y");
 
+        valx.setText("12345");
+
+        valy.setText("34567");
+
         jLabel4.setText("valor parada");
+
+        valparada.setText("8");
 
         generar.setText("Generar Numeros");
         generar.addActionListener(new java.awt.event.ActionListener() {
@@ -112,10 +118,10 @@ public class lecuyer extends javax.swing.JInternalFrame {
     private void generarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarActionPerformed
         int parada=Integer.parseInt(valparada.getText());
         int n=0;
-        long [] x =new long[parada];
-        long [] y =new long[parada];
-        long [] z =new long[parada-1];
-        long [] u =new long[parada-1];
+        double [] x =new double[parada];
+        double [] y =new double[parada];
+        double [] z =new double[parada-1];
+        double [] u =new double[parada-1];
         x[0]=Long.parseLong(valx.getText());
         y[0]=Long.parseLong(valy.getText());
         while(n<parada-1){

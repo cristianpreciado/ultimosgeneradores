@@ -133,10 +133,8 @@ public class lecuyer extends javax.swing.JInternalFrame {
             x[n+1]=(40014*x[n])%2147483563;
             y[n+1]=(40692*y[n])%2147483399;
             z[n+1]=(x[n] - y[n])%2147483562;
-            System.out.println(z[n+1]);
             if(z[n+1]>0){
                 u[n+1]=z[n+1]/2147483563;
-                
             }else{
                 u[n+1]=0.9999999995343387;
             }
